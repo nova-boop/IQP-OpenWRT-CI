@@ -76,14 +76,14 @@ UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-ap
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 
-UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "main"
-UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "luci-app-socat" 
+UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
+UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "" "luci-app-socat" 
 
 
-UPDATE_PACKAGE "dns2socks" "kenzok8/small-package" "main" "dns2socks"
-UPDATE_PACKAGE "ipt2socks" "kenzok8/small-package" "main" "ipt2socks"
-UPDATE_PACKAGE "microsocks" "kenzok8/small-package" "main" "microsocks"
-UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master"
+UPDATE_PACKAGE "dns2socks" "kenzok8/small-package" "main" "" "dns2socks"
+UPDATE_PACKAGE "ipt2socks" "kenzok8/small-package" "main" "" "ipt2socks"
+UPDATE_PACKAGE "microsocks" "kenzok8/small-package" "main" "" "microsocks"
+UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "stuntman" 
 UPDATE_PACKAGE "luci-app-natmapt" "muink/luci-app-natmapt" "master"
 UPDATE_PACKAGE "natmapt" "muink/openwrt-natmapt" "master"
 
