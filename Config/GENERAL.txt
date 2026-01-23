@@ -1,4 +1,25 @@
 # DIY
+CONFIG_PACKAGE_luci-app-pushbot=y
+
+CONFIG_PACKAGE_luci-app-socat=y
+CONFIG_PACKAGE_socat=y
+
+CONFIG_PACKAGE_dns2socks=y
+CONFIG_PACKAGE_ipt2socks=y
+CONFIG_PACKAGE_microsocks=y
+CONFIG_PACKAGE_stuntman=y
+CONFIG_PACKAGE_stuntman-client=y
+CONFIG_PACKAGE_stuntman-server=y
+CONFIG_PACKAGE_stuntman-testcode=y
+CONFIG_PACKAGE_luci-app-natmapt=y
+CONFIG_PACKAGE_natmapt=y
+CONFIG_PACKAGE_natmapt-client-script-deluge=y
+CONFIG_PACKAGE_natmapt-client-script-transmission=y
+CONFIG_PACKAGE_natmapt-notify-script-pushbullet=y
+CONFIG_PACKAGE_natmapt-notify-script-pushover=y
+CONFIG_PACKAGE_natmapt-notify-script-telegram=y
+
+# DIY
 
 # i18n
 CONFIG_LUCI_LANG_ja=y
@@ -123,9 +144,6 @@ CONFIG_PACKAGE_nmap-full=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_PACKAGE_luci-app-netspeedtest=y
 CONFIG_PACKAGE_luci-app-partexp=y
-CONFIG_PACKAGE_luci-app-samba4=y
-CONFIG_PACKAGE_luci-app-tailscale-community=y
-
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-wolplus=y
 
