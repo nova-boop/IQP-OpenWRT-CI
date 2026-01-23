@@ -76,16 +76,22 @@ UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-ap
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 
+# 2. 执行插件更新调用
+# 参数格式: UPDATE_PACKAGE "包名" "仓库路径" "分支" "特殊处理模式(pkg/name)" "旧目录搜索关键字"
+
+# --- 独立仓库模式 (直接克隆即可使用) ---
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
-UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "" "luci-app-socat" 
-
-
-UPDATE_PACKAGE "dns2socks" "kenzok8/small-package" "main" "" "dns2socks"
-UPDATE_PACKAGE "ipt2socks" "kenzok8/small-package" "main" "" "ipt2socks"
-UPDATE_PACKAGE "microsocks" "kenzok8/small-package" "main" "" "microsocks"
-UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "stuntman" 
 UPDATE_PACKAGE "luci-app-natmapt" "muink/luci-app-natmapt" "master"
 UPDATE_PACKAGE "natmapt" "muink/openwrt-natmapt" "master"
+
+# --- 重命名模式 (修正仓库名与包名不一致的情况) ---
+UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "name" "stuntman"
+
+# --- 提取模式 (从合集大仓库中提取特定插件，必须指定 "pkg") ---
+UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "pkg" "luci-app-socat"
+UPDATE_PACKAGE "dns2socks" "kenzok8/small-package" "main" "pkg" "dns2socks"
+UPDATE_PACKAGE "ipt2socks" "kenzok8/small-package" "main" "pkg" "ipt2socks"
+UPDATE_PACKAGE "microsocks" "kenzok8/small-package" "main" "pkg" "microsocks"
 
 
 
