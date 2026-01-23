@@ -92,8 +92,9 @@ UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "pkg" "luci-app-s
 UPDATE_PACKAGE "dns2socks" "kenzok8/small-package" "main" "pkg" "dns2socks"
 UPDATE_PACKAGE "ipt2socks" "kenzok8/small-package" "main" "pkg" "ipt2socks"
 UPDATE_PACKAGE "microsocks" "kenzok8/small-package" "main" "pkg" "microsocks"
-
-
+UPDATE_PACKAGE "luci-app-wrtbwmon" "kenzok8/small-package" "main" "pkg" "luci-app-wrtbwmon"
+UPDATE_PACKAGE "wrtbwmon" "kenzok8/small-package" "main" "pkg" "wrtbwmon"
+UPDATE_PACKAGE "luci-app-onliner" "kenzok8/small-package" "main" "pkg" "luci-app-onliner"
 
 #更新软件包版本
 UPDATE_VERSION() {
