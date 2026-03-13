@@ -83,18 +83,19 @@ UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 UPDATE_PACKAGE "luci-app-natmapt" "muink/luci-app-natmapt" "master"
 UPDATE_PACKAGE "natmapt" "muink/openwrt-natmapt" "master"
+UPDATE_PACKAGE "luci-app-onliner" "haiibo/openwrt-package" "master"
 
 # --- 重命名模式 (修正仓库名与包名不一致的情况) ---
 UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "name" "stuntman"
 
 # --- 提取模式 (从合集大仓库中提取特定插件，必须指定 "pkg") ---
-UPDATE_PACKAGE "luci-app-socat" "kenzok8/small-package" "main" "pkg" "luci-app-socat"
-UPDATE_PACKAGE "dns2socks" "kenzok8/small-package" "main" "pkg" "dns2socks"
-UPDATE_PACKAGE "ipt2socks" "kenzok8/small-package" "main" "pkg" "ipt2socks"
-UPDATE_PACKAGE "microsocks" "kenzok8/small-package" "main" "pkg" "microsocks"
-UPDATE_PACKAGE "luci-app-wrtbwmon" "kenzok8/small-package" "main" "pkg" "luci-app-wrtbwmon"
-UPDATE_PACKAGE "wrtbwmon" "kenzok8/small-package" "main" "pkg" "wrtbwmon"
-UPDATE_PACKAGE "luci-app-onliner" "kenzok8/small-package" "main" "pkg" "luci-app-onliner"
+UPDATE_PACKAGE "luci-app-socat" "chenmozhijin/luci-app-socat" "main" "pkg" "luci-app-socat"
+UPDATE_PACKAGE "dns2socks" "kenzok8/small" "main" "pkg" "dns2socks"
+UPDATE_PACKAGE "ipt2socks" "kenzok8/small" "main" "pkg" "ipt2socks"
+UPDATE_PACKAGE "microsocks" "kenzok8/small" "main" "pkg" "microsocks"
+UPDATE_PACKAGE "luci-app-wrtbwmon" "haiibo/openwrt-packages" "master" "pkg" "luci-app-wrtbwmon"
+UPDATE_PACKAGE "wrtbwmon" "haiibo/openwrt-packages" "master" "pkg" "wrtbwmon"
+
 
 #更新软件包版本
 UPDATE_VERSION() {
