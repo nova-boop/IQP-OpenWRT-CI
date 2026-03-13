@@ -83,7 +83,7 @@ UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 UPDATE_PACKAGE "luci-app-natmapt" "muink/luci-app-natmapt" "master"
 UPDATE_PACKAGE "natmapt" "muink/openwrt-natmapt" "master"
-UPDATE_PACKAGE "luci-app-onliner" "haiibo/openwrt-package" "master"
+UPDATE_PACKAGE "luci-app-onliner" "haiibo/openwrt-packages" "master"
 
 # --- 重命名模式 (修正仓库名与包名不一致的情况) ---
 UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "name" "stuntman"
