@@ -1,0 +1,22 @@
+#!/bin/sh
+
+system_cfg="system.@system[0]"
+config_dir="/etc/config"
+
+# --- 1.timezone
+uci batch<<EOF
+	set ${system_cfg}.zonename='Asia/Shanghai'
+	set ${system_cfg}.timezone='CST-8'
+	commit system
+EOF
+
+# --- 3. TTYD config
+if [ -e /etc/init.d/ttyd ];then
+	uci batch<<EOF
+	set ttyd.@ttyd[0].command='/bin/login -f root'
+	del ttyd.@ttyd[0].interface
+	commit ttyd
+EOF
+fi
+
+exit 0
