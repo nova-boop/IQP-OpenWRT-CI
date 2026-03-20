@@ -155,9 +155,20 @@ jobs:
       - name: Copy Files
         run: |
           cd ./wrt/
-          [ -e files ] && mv $GITHUB_WORKSPACE/files ./
           
-          tree -ifh ./files
+          if [ -d "$GITHUB_WORKSPACE/files" ]; then
+            cp -r "$GITHUB_WORKSPACE/files" ./
+          else
+            echo "⚠️ $GITHUB_WORKSPACE/files 不存在，跳过复制"
+          fi
+          
+          if [ -d ./files ]; then
+            echo "✅ ./files 目录内容："
+            tree -ifh ./files
+          else
+            echo "❌ ./files 仍未出现"
+          fi
+        shell: /usr/bin/bash {0}
 
       - name: Custom Packages
         run: |
