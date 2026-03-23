@@ -89,7 +89,7 @@ UPDATE_PACKAGE "luci-app-onliner" "haiibo/openwrt-packages" "master"
 UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "name" "stuntman"
 
 # --- 提取模式 (从合集大仓库中提取特定插件，必须指定 "pkg") ---
-UPDATE_PACKAGE "luci-app-socat" "chenmozhijin/luci-app-socat" "main" "pkg" "luci-app-socat"
+UPDATE_PACKAGE "luci-app-socat" "chenmozhijin/luci-app-socat" "main"
 UPDATE_PACKAGE "dns2socks" "kenzok8/small" "master" "pkg" "dns2socks"
 UPDATE_PACKAGE "ipt2socks" "kenzok8/small" "master" "pkg" "ipt2socks"
 UPDATE_PACKAGE "microsocks" "kenzok8/small" "master" "pkg" "microsocks"
