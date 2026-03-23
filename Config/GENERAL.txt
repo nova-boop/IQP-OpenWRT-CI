@@ -1,9 +1,6 @@
 # DIY
 CONFIG_PACKAGE_luci-app-pushbot=y
 
-CONFIG_PACKAGE_luci-app-socat=y
-CONFIG_PACKAGE_socat=y
-
 CONFIG_PACKAGE_dns2socks=y
 CONFIG_PACKAGE_ipt2socks=y
 CONFIG_PACKAGE_microsocks=y
