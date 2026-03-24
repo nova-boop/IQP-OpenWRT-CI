@@ -217,6 +217,14 @@ jobs:
           du -h --max-depth=1
           echo "======================="
 
+      - name: Packages Apk
+        run: |
+            mkdir packages &&  mkdir ./wrt/upload
+            mv -f ./wrt/bin/packages/*/*/*.apk packages
+            tar -zcf Packages.tar.gz packages
+            mv -f Packages.tar.gz ./wrt/upload/
+            rm -rf packages/
+        
       - name: Package Firmware
         run: |
           cd ./wrt/ && mkdir ./upload/
