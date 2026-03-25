@@ -224,6 +224,10 @@ jobs:
             tar -zcf Packages.tar.gz packages
             mv -f Packages.tar.gz ./wrt/upload/
             rm -rf packages/
+            
+            cd ./wrt
+            make defconfig
+            ./scripts/diffconfig.sh > ./upload/$WRT_CONFIG.config
         
       - name: Package Firmware
         run: |
