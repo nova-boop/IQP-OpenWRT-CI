@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (C) 2026 VIKINGYFY
+
 #云编译公用核心
 name: WRT-CORE
 
@@ -74,7 +77,7 @@ jobs:
           sudo -E apt -yqq autoremove --purge
           sudo -E apt -yqq autoclean
           sudo -E apt -yqq clean
-          sudo -E apt -yqq install dos2unix python3-netifaces libfuse-dev tree
+          sudo -E apt -yqq install dos2unix libfuse-dev
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
@@ -152,24 +155,6 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Copy Files
-        run: |
-          cd ./wrt/
-          
-          if [ -d "$GITHUB_WORKSPACE/files" ]; then
-            cp -r "$GITHUB_WORKSPACE/files" ./
-          else
-            echo "⚠️ $GITHUB_WORKSPACE/files 不存在，跳过复制"
-          fi
-          
-          if [ -d ./files ]; then
-            echo "✅ ./files 目录内容："
-            tree -ifh ./files
-          else
-            echo "❌ ./files 仍未出现"
-          fi
-        shell: /usr/bin/bash {0}
-
       - name: Custom Packages
         run: |
           cd ./wrt/package/
@@ -217,21 +202,9 @@ jobs:
           du -h --max-depth=1
           echo "======================="
 
-      - name: Packages Apk
-        run: |
-            mkdir packages &&  mkdir ./wrt/upload
-            mv -f ./wrt/bin/packages/*/*/*.apk packages
-            tar -zcf Packages.tar.gz packages
-            mv -f Packages.tar.gz ./wrt/upload/
-            rm -rf packages/
-            
-            cd ./wrt
-            make defconfig
-            ./scripts/diffconfig.sh > ./upload/$WRT_CONFIG.config
-        
       - name: Package Firmware
         run: |
-          cd ./wrt/ && mkdir -p ./upload/
+          cd ./wrt/ && mkdir ./upload/
 
           cp -f ./.config ./upload/Config-"$WRT_CONFIG"-"$WRT_INFO"-"$WRT_BRANCH"-"$WRT_DATE".txt
 
@@ -259,9 +232,11 @@ jobs:
           tag_name: ${{env.WRT_CONFIG}}-${{env.WRT_INFO}}-${{env.WRT_BRANCH}}-${{env.WRT_DATE}}
           files: ./wrt/upload/*.*
           body: |
-            Customize XIAOMI AX3600
-            
-            带开源硬件加速，别问了！
+            这是个平台固件包，内含多个设备！
+            请注意选择你需要的设备固件！
+            不要问，刷就完事了！
+
+            全系带开源硬件加速，别问了！
 
             源码：${{env.WRT_REPO}}
             分支：${{env.WRT_BRANCH}}
