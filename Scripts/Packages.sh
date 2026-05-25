@@ -95,7 +95,7 @@ UPDATE_PACKAGE "ipt2socks" "kenzok8/small" "master" "pkg" "ipt2socks"
 UPDATE_PACKAGE "microsocks" "kenzok8/small" "master" "pkg" "microsocks"
 UPDATE_PACKAGE "luci-app-wrtbwmon" "haiibo/openwrt-packages" "master" "pkg" "luci-app-wrtbwmon"
 UPDATE_PACKAGE "wrtbwmon" "haiibo/openwrt-packages" "master" "pkg" "wrtbwmon"
-
+UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "v6.1.8"
 
 #更新软件包版本
 UPDATE_VERSION() {
