@@ -1,6 +1,10 @@
 # DIY
 CONFIG_PACKAGE_luci-app-pushbot=y
 
+# OpenAppFilter
+CONFIG_PACKAGE_kmod-oaf=y
+CONFIG_PACKAGE_luci-app-oaf=y
+
 CONFIG_PACKAGE_dns2socks=y
 CONFIG_PACKAGE_ipt2socks=y
 CONFIG_PACKAGE_microsocks=y
