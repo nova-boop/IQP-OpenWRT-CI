@@ -11,6 +11,7 @@ on:
         required: true
         type: choice
         options:
+          - AIROHA-WIFI-NO
           - IPQ53XX-WIFI-NO
           - IPQ60XX-WIFI-NO
           - IPQ60XX-WIFI-YES
@@ -20,8 +21,8 @@ on:
           - MEDIATEK-WIFI-NO
           - MEDIATEK-WIFI-YES
           - ROCKCHIP
-          - TEST
           - X86
+          - TEST
       SOURCE:
         default: 'VIKINGYFY/immortalwrt'
         required: true
