@@ -86,6 +86,9 @@ UPDATE_PACKAGE "luci-app-natmapt" "muink/luci-app-natmapt" "master"
 UPDATE_PACKAGE "natmapt" "muink/openwrt-natmapt" "master"
 UPDATE_PACKAGE "luci-app-onliner" "haiibo/openwrt-packages" "master"
 
+# 定时限速
+UPDATE_PACKAGE "luci-app-eqosplus" "sirpdboy/luci-app-eqosplus" "main"
+
 # --- 重命名模式 (修正仓库名与包名不一致的情况) ---
 UPDATE_PACKAGE "stuntman" "muink/openwrt-stuntman" "master" "name" "stuntman"
 
@@ -97,6 +100,9 @@ UPDATE_PACKAGE "microsocks" "kenzok8/small" "master" "pkg" "microsocks"
 UPDATE_PACKAGE "luci-app-wrtbwmon" "haiibo/openwrt-packages" "master" "pkg" "luci-app-wrtbwmon"
 UPDATE_PACKAGE "wrtbwmon" "haiibo/openwrt-packages" "master" "pkg" "wrtbwmon"
 UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "v6.1.8"
+# NFT版上网时间控制插件
+UPDATE_PACKAGE "luci-app-timecontrol" "sirpdboy/luci-app-timecontrol" "main"
+
 
 #更新软件包版本
 UPDATE_VERSION() {
