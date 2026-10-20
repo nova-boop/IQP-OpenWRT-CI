@@ -201,6 +201,18 @@ jobs:
 
           make download -j$(nproc)
 
+      - name: Check hack patch
+        if: env.WRT_TEST != 'true'
+        run: |
+          cd ./wrt/
+          echo -e "\n\n\n"
+          ls -l target/linux/generic/hack-6.18/
+          echo -e "\n\n\n"
+          
+          rm -rf target/linux/generic/hack-6.18/952-net-conntrack-events-support-multiple-registrant.patch
+          
+          ls -l target/linux/generic/hack-6.18/
+        
       - name: Compile Firmware
         if: env.WRT_TEST != 'true'
         run: |
