@@ -209,6 +209,8 @@ jobs:
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
 
+          bash "$GITHUB_WORKSPACE/.github/scripts/prepare-build-host.sh"
+
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
       - name: Prepare Rust Toolchain
