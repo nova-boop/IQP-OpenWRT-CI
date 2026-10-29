@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-License-Identifier: MIT
+# Copyright (C) 2026 VIKINGYFY
 
 FEEDS_PATH="./feeds"
 PACKAGE_PATH="./package"
